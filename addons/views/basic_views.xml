@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-        <!-- Root menu {{{ -->
-        <menuitem id="basic_menu_root"
-            name="Basic Odoo"
-            sequence="2"/>
-        <!-- }}} -->
-
-        <!-- Main menu {{{ -->
-        <menuitem id="basic_main_menu"
-            name="Main Menu"
-            parent="basic_menu_root"
-            sequence="2"/>
-        <!-- }}} -->
-
-        <!-- Action and menu basic {{{ -->
-        <record id="action_basic" model="ir.actions.act_window">
-            <field name="name">Basic</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">basic</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="context">{}</field>
-            <field name="domain">[]</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">
-                    Create test data.
-                </p>
-            </field>
-        </record>
-
-        <menuitem id="menu_basic"
-            name="Basic"
-            action="action_basic"
-            parent="basic_main_menu"
-            sequence="2"/>
-        <!-- }}} -->
-
-        <!-- View basic {{{ -->
+        <!-- Basic Tree {{{ -->
         <record id="view_basic_tree" model="ir.ui.view">
             <field name="name">basic.tree</field>
             <field name="model">basic</field>
@@ -46,7 +10,9 @@
                 </tree>
             </field>
         </record>
+        <!-- }}} -->
 
+        <!-- Basic Form {{{ -->
         <record id="view_basic_form" model="ir.ui.view">
             <field name="name">basic.form</field>
             <field name="model">basic</field>
@@ -58,7 +24,7 @@
                     <sheet>
                         <div class="oe_title">
                             <h1>
-                                <field name="name"/>
+                                <field name="name" readonly="1"/>
                             </h1>
                         </div>
                         <group>
@@ -85,7 +51,7 @@
                                                         <label for="product_uom_qty" string="Quantity"/>
                                                         <div class="o_row">
                                                             <field name="product_uom_qty" class="oe_inline"/>
-                                                            <field name="product_uom" class="oe_inline"/>
+                                                            <field name="product_uom" class="oe_inline" readonly="1"/>
                                                         </div>
                                                         <field name="price_unit"/>
                                                         <field name="amount"/>

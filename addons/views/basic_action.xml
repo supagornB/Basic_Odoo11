@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--  Basic {{{ -->
+        <record id="action_basic" model="ir.actions.act_window">
+            <field name="name">Basic Order</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">basic</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create test data.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_basic"
+            name="Basic"
+            action="action_basic"
+            parent="basic_main_menu"
+            sequence="2"/>
+        <!-- }}} -->
+ 
+        <!-- Product {{{ -->
+        <menuitem id="menu_basic_product"
+            name="Product"
+            parent="basic_catalog_menu"
+            action="product.product_template_action"
+            sequence="80"
+            groups="base.group_system"/>
+        <!-- }}} -->
+
+        <!-- Configuration Setting {{{ -->
+        <record id="action_basic_configuration" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_basic_config"
+            name="Settings"
+            parent="basic_configuration_menu"
+            action="action_basic_configuration"
+            sequence="90"
+            groups="base.group_system"/>
+        <!-- }}} -->
+    </data>
+</odoo>

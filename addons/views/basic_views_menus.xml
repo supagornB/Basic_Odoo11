@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Root menu -->
+        <menuitem id="basic_menu_root"
+            name="Basic Odoo"
+            sequence="1"/>
+
+        <!-- Main menu -->
+        <menuitem id="basic_main_menu"
+            name="Main Menu"
+            parent="basic_menu_root"
+            sequence="10"/>
+
+        <menuitem id="basic_catalog_menu"
+            name="Catalog"
+            parent="basic_menu_root"
+            sequence="80"/>
+
+        <menuitem id="basic_configuration_menu"
+            name="Configuration"
+            parent="basic_menu_root"
+            sequence="90"/>
+</odoo>

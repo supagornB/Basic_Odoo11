@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Basic Odoo',
+    'name': 'Demo Odoo',
     'version': '1.1',
-    'category': 'Basic Odoo',
+    'category': 'Demo Odoo',
     'sequence': 10,
     'summary': '',
     'depends': [
@@ -13,6 +13,8 @@
     ],
     'description': "It is a module for writing basic odoo.",
     'data': [
+        'views/basic_views_menus.xml',
+        'views/basic_action.xml',
         'views/basic_views.xml',
         'views/fleet_views_menus.xml',
     ],
